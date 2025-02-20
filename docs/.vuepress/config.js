@@ -4,7 +4,7 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 
 export default defineUserConfig({
-  // base: "diandiandidi519.github.io",
+  base: "blog",
   lang: "en-US",
 
   title: "前端知识图谱",
