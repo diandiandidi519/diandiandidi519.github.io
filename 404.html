@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>前端知识图谱</title><meta name="description" content="构建属于自己的知识库">
+    <link rel="preload" href="/assets/style-JHxLXKeP.css" as="style"><link rel="stylesheet" href="/assets/style-JHxLXKeP.css">
+    <link rel="modulepreload" href="/assets/app-BzoIMgNK.js"><link rel="modulepreload" href="/assets/404.html-Bz4ZJMvg.js">
+    <link rel="prefetch" href="/assets/index.html-B_3VARbt.js" as="script"><link rel="prefetch" href="/assets/index.html-Chw9Yob8.js" as="script"><link rel="prefetch" href="/assets/index.html-BPAC6y6q.js" as="script"><link rel="prefetch" href="/assets/index.html-DZCHAFJg.js" as="script"><link rel="prefetch" href="/assets/archive1.html-BFU4K_VY.js" as="script"><link rel="prefetch" href="/assets/archive2.html-BIahhDU1.js" as="script"><link rel="prefetch" href="/assets/article1.html-CU79c4-A.js" as="script"><link rel="prefetch" href="/assets/article10.html-DplGgttS.js" as="script"><link rel="prefetch" href="/assets/article11.html-DF9OjBM-.js" as="script"><link rel="prefetch" href="/assets/article12.html-gIUyzVxK.js" as="script"><link rel="prefetch" href="/assets/article2.html-BQxJnxk7.js" as="script"><link rel="prefetch" href="/assets/article3.html-B8F277hF.js" as="script"><link rel="prefetch" href="/assets/article4.html-avlRZGci.js" as="script"><link rel="prefetch" href="/assets/article5.html-VPzNcFdH.js" as="script"><link rel="prefetch" href="/assets/article6.html-B6B89RX5.js" as="script"><link rel="prefetch" href="/assets/article7.html-Cr3G3nfb.js" as="script"><link rel="prefetch" href="/assets/article8.html-uvfmE8lI.js" as="script"><link rel="prefetch" href="/assets/article9.html-DEUcEkXQ.js" as="script"><link rel="prefetch" href="/assets/sticky.html-CVjV4JH2.js" as="script"><link rel="prefetch" href="/assets/sticky2.html-BUXB7BkE.js" as="script"><link rel="prefetch" href="/assets/index.html-MsfHIKFU.js" as="script"><link rel="prefetch" href="/assets/index.html-Bd83yqIP.js" as="script"><link rel="prefetch" href="/assets/index.html-DcNH1pMb.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-6f58a052><main class="page" data-v-6f58a052><div vp-content data-v-6f58a052><h1 data-v-6f58a052>404</h1><blockquote data-v-6f58a052>There&#39;s nothing here.</blockquote><a class="route-link" href="/" data-v-6f58a052>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-BzoIMgNK.js" defer></script>
+  </body>
+</html>
