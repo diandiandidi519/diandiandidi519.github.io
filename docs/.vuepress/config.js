@@ -19,35 +19,123 @@ export default defineUserConfig({
         text: "JS",
         link: "/js/",
       },
-      {
-        text: "浏览器工作原理",
-        link: "/browser/",
-      },
-      {
-        text: "React18",
-        link: "/react18/",
-      },
-      {
-        text: "Vue",
-        link: "/vue3/",
-      },
-      {
-        text: "TypeScript",
-        link: "/typescript/",
-      },
-      {
-        text: "微前端",
-        link: "/microfrontend/",
-      },
+      // {
+      //   text: "浏览器工作原理",
+      //   link: "/browser/",
+      // },
+      // {
+      //   text: "React18",
+      //   link: "/react18/",
+      // },
+      // {
+      //   text: "Vue",
+      //   link: "/vue3/",
+      // },
+      // {
+      //   text: "TypeScript",
+      //   link: "/typescript/",
+      // },
+      // {
+      //   text: "微前端",
+      //   link: "/microfrontend/",
+      // },
       // {
       //   text: "设计模式",
       //   link: "/design/",
       // },
-      // {
-      //   text: "数据结构和算法",
-      //   link: "/algorithm/",
-      // },
+      {
+        text: "数据结构和算法",
+        link: "/algorithm/",
+      },
     ],
+    sidebar: {
+      "/algorithm": [
+        {
+          collapsible: false,
+          text: "数据结构和算法",
+          children: [
+            {
+              text: "哈希",
+              link: "/algorithm/哈希/README.md",
+              children: [
+                {
+                  text: "两数之和",
+                  link: "/algorithm/哈希/两数之和.md",
+                },
+                {
+                  text: "字母异位词分组",
+                  link: "/algorithm/哈希/字母异位词分组.md",
+                },
+              ],
+            },
+            {
+              text: "二叉树",
+              link: "/algorithm/二叉树/README.md",
+              children: [
+                {
+                  text: "中序遍历",
+                  link: "/algorithm/二叉树/中序遍历.md",
+                },
+                {
+                  text: "层次遍历",
+                  link: "/algorithm/二叉树/层次遍历.md",
+                },
+              ],
+            },
+            {
+              text: "双指针",
+              link: "/algorithm/双指针/README.md",
+              children: [
+                {
+                  text: "三数之和",
+                  link: "/algorithm/双指针/三数之和.md",
+                },
+              ],
+            },
+            {
+              text: "滑动窗口",
+              link: "/algorithm/滑动窗口/README.md",
+              children: [
+                {
+                  text: "无重复字符的最长子串",
+                  link: "/algorithm/滑动窗口/无重复字符的最长子串.md",
+                },
+              ],
+            },
+          ],
+          link: "/algorithm/README.md",
+        },
+      ],
+      "/js": [
+        {
+          text: "js常见的手写",
+          children: [
+            {
+              text: "其他",
+              link: "/js/手写/其他/README.md",
+              children: [
+                {
+                  text: "发布订阅",
+                  link: "/js/手写/其他/发布订阅.md",
+                },
+                {
+                  text: "jsbridge",
+                  link: "/js/手写/其他/jsbridge.md",
+                },
+                {
+                  text: "LRU",
+                  link: "/js/手写/其他/lru.md",
+                },
+                {
+                  text: "list2tree",
+                  link: "/js/手写/其他/list2tree.md",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   }),
 
   // plugins: [
