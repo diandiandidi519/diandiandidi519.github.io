@@ -100,6 +100,10 @@ export default defineUserConfig({
                   text: "无重复字符的最长子串",
                   link: "/algorithm/滑动窗口/无重复字符的最长子串.md",
                 },
+                {
+                  text: "和为K的子数组",
+                  link: "/algorithm/滑动窗口/和为K的子数组.md",
+                },
               ],
             },
           ],
@@ -129,6 +133,10 @@ export default defineUserConfig({
                 {
                   text: "list2tree",
                   link: "/js/手写/其他/list2tree.md",
+                },
+                {
+                  text: "axios",
+                  link: "/js/手写/其他/axios.md",
                 },
               ],
             },
