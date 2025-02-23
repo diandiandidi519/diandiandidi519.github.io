@@ -37,37 +37,36 @@
 ```js
 
 function list2tree(arr, root) {
-    const hashMap = {};
+    const map = {};
 
     const result = []
 
     for(const cur of arr) {
         const {id, parentId} = cur
-        // 存在的节点都先把children置为空
-        if(!hashMap[id]) {
-            hashMap[id] = {
+        // 不存在的节点都先把children置为空
+        if(!map[id]) {
+            map[id] = {
                 children: []
             }
         }
-        // 存储当前节点到hash上
-        hashMap[id] = {
+        // 存储当前节点
+        map[id] = {
             ...cur,
-            children: hashMap[id].children
+            children: map[id].children
         }
         // 当前是根节点
         if(parentId === root) {
-            result.push(hashMap[id])
+            result.push(map[id])
         } else {
             // 如果能够查找到父节点，要把当前节点存入父节点的children里面
-            const parent = map[parentId]
             // 可能父节点还没有存入hash表里面
-            if(!hashMap[parent]) {
-                hashMap[parent] = {
+            if(!map[parentId]) {
+                map[parentId] = {
                     children: []
                 }
             }
             // 非根节点的话，找到父节点，把自己塞到父节点的children中即可
-            hashMap[parent].children.push(hashMap[id])
+            map[parentId].children.push(map[id])
         }
        
     }

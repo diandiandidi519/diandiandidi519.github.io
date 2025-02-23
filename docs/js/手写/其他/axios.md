@@ -1,9 +1,10 @@
-# Axios的拦截器来拦截重复请求和处理竞态问题
+# Axios的拦截器处理竞态问题和实现
 
 
-Axios 拦截器可以通过管理请求标识和取消机制来拦截重复请求并处理竞态问题。以下是实现方案及示例代码：
+# 通过取消重复请求实现
 
 一、实现思路
+
 生成唯一请求标识：通过 请求方法 + URL + 参数 生成唯一 Key，用于标识重复请求。
 
 使用 AbortController 取消请求：利用 AbortController 取消重复的旧请求。
@@ -11,6 +12,7 @@ Axios 拦截器可以通过管理请求标识和取消机制来拦截重复请�
 管理请求队列：通过 Map 存储正在进行的请求，拦截重复请求时取消旧请求。
 
 二、完整代码实现
+
 ```js
 import axios from 'axios';
 
@@ -86,8 +88,8 @@ axios.interceptors.response.use(
 被取消的请求会触发 Cancel 错误，通过 axios.isCancel() 过滤处理。
 
 四、使用示例
+
 ```js
-复制
 // 示例：快速点击触发重复请求
 function fetchData() {
   axios.get('/api/data', { params: { id: 1 } })
@@ -105,9 +107,14 @@ function fetchData() {
 fetchData();
 fetchData();
 ```
+
 五、适用场景
+
 表单提交防重复：防止用户多次点击提交按钮。
 
 列表筛选防抖：频繁筛选时取消旧请求，确保结果对应最新条件。
 
 页面切换取消请求：离开页面时取消未完成的请求。
+
+
+# 通过时间戳实现
