@@ -90,6 +90,10 @@ export default defineUserConfig({
                   text: "三数之和",
                   link: "/algorithm/双指针/三数之和.md",
                 },
+                {
+                  text: "移动零",
+                  link: "/algorithm/双指针/移动零.md",
+                },
               ],
             },
             {
@@ -123,20 +127,20 @@ export default defineUserConfig({
                   link: "/js/手写/其他/发布订阅.md",
                 },
                 {
-                  text: "jsbridge",
+                  text: "JsBridge",
                   link: "/js/手写/其他/jsbridge.md",
                 },
                 {
-                  text: "LRU",
+                  text: "LRU缓存",
                   link: "/js/手写/其他/lru.md",
+                },
+                {
+                  text: "axios拦截器",
+                  link: "/js/手写/其他/axios.md",
                 },
                 {
                   text: "list2tree",
                   link: "/js/手写/其他/list2tree.md",
-                },
-                {
-                  text: "axios",
-                  link: "/js/手写/其他/axios.md",
                 },
               ],
             },
