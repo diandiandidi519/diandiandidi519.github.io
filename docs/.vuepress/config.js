@@ -66,6 +66,10 @@ export default defineUserConfig({
                   text: "字母异位词分组",
                   link: "/algorithm/哈希/字母异位词分组.md",
                 },
+                {
+                  text: "最长连续序列",
+                  link: "/algorithm/哈希/最长连续序列.md",
+                },
               ],
             },
             {
@@ -93,6 +97,10 @@ export default defineUserConfig({
                 {
                   text: "移动零",
                   link: "/algorithm/双指针/移动零.md",
+                },
+                {
+                  text: "盛最多水的容器",
+                  link: "/algorithm/双指针/盛最多水的容器.md",
                 },
               ],
             },
