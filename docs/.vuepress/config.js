@@ -118,6 +118,23 @@ export default defineUserConfig({
                 },
               ],
             },
+            {
+              text: "栈",
+              children: [
+                {
+                  text: "括号内的字符串",
+                  link: "/algorithm/栈/括号内的字符串.md",
+                },
+                {
+                  text: "字符串解码",
+                  link: "/algorithm/栈/字符串解码.md",
+                },
+                {
+                  text: "最小栈",
+                  link: "/algorithm/栈/最小栈.md",
+                },
+              ],
+            },
           ],
           link: "/algorithm/README.md",
         },
