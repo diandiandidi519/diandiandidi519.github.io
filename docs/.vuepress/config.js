@@ -135,6 +135,43 @@ export default defineUserConfig({
                 },
               ],
             },
+            {
+              text: "动态规划",
+              children: [
+                {
+                  text: "爬楼梯",
+                  link: "/algorithm/动态规划/爬楼梯.md",
+                },
+                {
+                  text: "最大子数组和",
+                  link: "/algorithm/动态规划/最大子数组和.md",
+                },
+                {
+                  text: "乘积最大数组",
+                  link: "/algorithm/动态规划/乘积最大数组.md",
+                },
+                {
+                  text: "不同路径",
+                  link: "/algorithm/动态规划/不同路径.md",
+                },
+                {
+                  text: "最小路径和",
+                  link: "/algorithm/动态规划/最小路径和.md",
+                },
+                {
+                  text: "最长递增子序列",
+                  link: "/algorithm/动态规划/最长递增子序列.md",
+                },
+                {
+                  text: "最长回文子串",
+                  link: "/algorithm/动态规划/最长回文子串.md",
+                },
+                {
+                  text: "最长重复子串",
+                  link: "/algorithm/动态规划/最长重复子串.md",
+                },
+              ],
+            },
           ],
           link: "/algorithm/README.md",
         },
@@ -166,6 +203,15 @@ export default defineUserConfig({
                 {
                   text: "list2tree",
                   link: "/js/手写/其他/list2tree.md",
+                },
+              ],
+            },
+            {
+              text: "数组",
+              children: [
+                {
+                  text: "数组拍平",
+                  link: "/js/手写/数组/拍平.md",
                 },
               ],
             },
