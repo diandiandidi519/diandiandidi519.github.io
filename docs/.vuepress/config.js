@@ -170,6 +170,10 @@ export default defineUserConfig({
                   text: "最长重复子串",
                   link: "/algorithm/动态规划/最长重复子串.md",
                 },
+                {
+                  text: "最长公共子序列",
+                  link: "/algorithm/动态规划/最长公共子序列.md",
+                },
               ],
             },
           ],
