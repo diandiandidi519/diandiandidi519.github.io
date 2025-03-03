@@ -72,20 +72,7 @@ export default defineUserConfig({
                 },
               ],
             },
-            {
-              text: "二叉树",
-              link: "/algorithm/二叉树/README.md",
-              children: [
-                {
-                  text: "中序遍历",
-                  link: "/algorithm/二叉树/中序遍历.md",
-                },
-                {
-                  text: "层次遍历",
-                  link: "/algorithm/二叉树/层次遍历.md",
-                },
-              ],
-            },
+
             {
               text: "双指针",
               link: "/algorithm/双指针/README.md",
@@ -136,11 +123,46 @@ export default defineUserConfig({
               ],
             },
             {
+              text: "二叉树",
+              link: "/algorithm/二叉树/README.md",
+              children: [
+                {
+                  text: "中序遍历",
+                  link: "/algorithm/二叉树/中序遍历.md",
+                },
+                {
+                  text: "层次遍历",
+                  link: "/algorithm/二叉树/层次遍历.md",
+                },
+              ],
+            },
+
+            {
               text: "动态规划",
               children: [
                 {
                   text: "爬楼梯",
                   link: "/algorithm/动态规划/爬楼梯.md",
+                },
+                {
+                  text: "使用最小花费爬楼梯",
+                  link: "/algorithm/动态规划/使用最小花费爬楼梯.md",
+                },
+                {
+                  text: "杨辉三角",
+                  link: "/algorithm/动态规划/杨辉三角.md",
+                },
+                {
+                  text: "完全平方数",
+                  link: "/algorithm/动态规划/完全平方数.md",
+                },
+                {
+                  text: "打家劫舍",
+                  link: "/algorithm/动态规划/打家劫舍.md",
+                },
+                {
+                  text: "打家劫舍2",
+                  link: "/algorithm/动态规划/打家劫舍2.md",
                 },
                 {
                   text: "最大子数组和",
@@ -151,12 +173,16 @@ export default defineUserConfig({
                   link: "/algorithm/动态规划/乘积最大数组.md",
                 },
                 {
+                  text: "最小路径和",
+                  link: "/algorithm/动态规划/最小路径和.md",
+                },
+                {
                   text: "不同路径",
                   link: "/algorithm/动态规划/不同路径.md",
                 },
                 {
-                  text: "最小路径和",
-                  link: "/algorithm/动态规划/最小路径和.md",
+                  text: "不同路径2",
+                  link: "/algorithm/动态规划/不同路径2.md",
                 },
                 {
                   text: "最长递增子序列",
@@ -173,6 +199,34 @@ export default defineUserConfig({
                 {
                   text: "最长公共子序列",
                   link: "/algorithm/动态规划/最长公共子序列.md",
+                },
+                {
+                  text: "最长回文子序列",
+                  link: "/algorithm/动态规划/最长回文子序列.md",
+                },
+                {
+                  text: "零钱兑换",
+                  link: "/algorithm/动态规划/零钱兑换.md",
+                },
+                {
+                  text: "零钱兑换2",
+                  link: "/algorithm/动态规划/零钱兑换2.md",
+                },
+                {
+                  text: "买卖股票",
+                  link: "/algorithm/动态规划/买卖股票.md",
+                },
+                {
+                  text: "买卖股票2",
+                  link: "/algorithm/动态规划/买卖股票2.md",
+                },
+                {
+                  text: "分割等和子集",
+                  link: "/algorithm/动态规划/分割等和子集.md",
+                },
+                {
+                  text: "单词拆分",
+                  link: "/algorithm/动态规划/单词拆分.md",
                 },
               ],
             },
@@ -216,6 +270,35 @@ export default defineUserConfig({
                 {
                   text: "数组拍平",
                   link: "/js/手写/数组/拍平.md",
+                },
+              ],
+            },
+            {
+              text: "函数",
+              children: [
+                {
+                  text: "防抖",
+                  link: "/js/手写/函数/防抖.md",
+                },
+                {
+                  text: "节流",
+                  link: "/js/手写/函数/节流.md",
+                },
+                {
+                  text: "apply",
+                  link: "/js/手写/函数/apply.md",
+                },
+                {
+                  text: "call",
+                  link: "/js/手写/函数/call.md",
+                },
+                {
+                  text: "bind",
+                  link: "/js/手写/函数/bind.md",
+                },
+                {
+                  text: "new",
+                  link: "/js/手写/函数/new.md",
                 },
               ],
             },
