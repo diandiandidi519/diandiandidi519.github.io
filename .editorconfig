@@ -1,0 +1,20 @@
+# 声明根配置文件（停止向上查找）
+root = true
+
+# 所有文件通用规则
+[*]
+charset = utf-8          # 编码格式
+end_of_line = lf         # 换行符（Unix风格）
+indent_style = space     # 缩进方式：空格
+indent_size = 2          # 缩进空格数
+trim_trailing_whitespace = true  # 删除行尾空格
+insert_final_newline = true      # 文件末尾插入空行
+
+# Markdown 文件特殊规则
+[*.md]
+max_line_length = 0      # 不限制行长度（避免段落换行干扰）
+trim_trailing_whitespace = false  # 保留行尾空格（避免列表/换行符问题）
+
+# JavaScript/Vue 文件规则（可选）
+[*.{js,vue}]
+indent_size = 2          # 保持与 VuePress 默认缩进一致

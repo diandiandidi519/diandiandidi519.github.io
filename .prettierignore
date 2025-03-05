@@ -1,0 +1,7 @@
+# 忽略目录
+dist/
+node_modules/
+.vuepress/dist/
+# 忽略特定文件类型
+*.svg
+*.mdx

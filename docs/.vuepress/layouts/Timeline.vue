@@ -1,9 +1,9 @@
 <script setup>
-import { useBlogType } from '@vuepress/plugin-blog/client'
-import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
-import ArticleList from '../components/ArticleList.vue'
+  import { useBlogType } from '@vuepress/plugin-blog/client'
+  import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
+  import ArticleList from '../components/ArticleList.vue'
 
-const timelines = useBlogType('timeline')
+  const timelines = useBlogType('timeline')
 </script>
 
 <template>
@@ -19,8 +19,8 @@ const timelines = useBlogType('timeline')
 </template>
 
 <style lang="scss">
-.timeline-title {
-  padding: 0;
-  text-align: center;
-}
+  .timeline-title {
+    padding: 0;
+    text-align: center;
+  }
 </style>

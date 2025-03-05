@@ -1,6 +1,5 @@
 # Axios的拦截器处理竞态问题和实现
 
-
 # 通过取消重复请求实现
 
 一、实现思路
@@ -14,59 +13,60 @@
 二、完整代码实现
 
 ```js
-import axios from 'axios';
+import axios from 'axios'
 
 // 存储正在进行中的请求
-const pendingRequests = new Map();
+const pendingRequests = new Map()
 
 /**
  * 生成请求的唯一标识（序列化参数，确保键的顺序不影响）
- * @param {import('axios').AxiosRequestConfig} config 
+ * @param {import('axios').AxiosRequestConfig} config
  * @returns {string}
  */
 function generateRequestKey(config) {
-  const { method, url, params, data } = config;
-  const sortedParams = params ? JSON.stringify(params, Object.keys(params).sort()) : '';
-  const sortedData = data ? JSON.stringify(data, Object.keys(data).sort()) : '';
-  return [method, url, sortedParams, sortedData].join('&');
+  const { method, url, params, data } = config
+  const sortedParams = params ? JSON.stringify(params, Object.keys(params).sort()) : ''
+  const sortedData = data ? JSON.stringify(data, Object.keys(data).sort()) : ''
+  return [method, url, sortedParams, sortedData].join('&')
 }
 
 // 请求拦截器：处理重复请求
 axios.interceptors.request.use(config => {
-  const key = generateRequestKey(config);
-  
+  const key = generateRequestKey(config)
+
   // 检查是否为重复请求
   if (pendingRequests.has(key)) {
-    const abortController = pendingRequests.get(key);
-    abortController.abort(); // 取消旧请求
-    pendingRequests.delete(key);
+    const abortController = pendingRequests.get(key)
+    abortController.abort() // 取消旧请求
+    pendingRequests.delete(key)
   }
 
   // 创建新的 AbortController 并存储
-  const abortController = new AbortController();
-  config.signal = abortController.signal;
-  pendingRequests.set(key, abortController);
+  const abortController = new AbortController()
+  config.signal = abortController.signal
+  pendingRequests.set(key, abortController)
 
-  return config;
-});
+  return config
+})
 
 // 响应拦截器：请求完成后移除队列
 axios.interceptors.response.use(
   response => {
-    const key = generateRequestKey(response.config);
-    pendingRequests.delete(key);
-    return response;
+    const key = generateRequestKey(response.config)
+    pendingRequests.delete(key)
+    return response
   },
   error => {
     // 请求被取消的错误无需处理
     if (!axios.isCancel(error)) {
-      const key = generateRequestKey(error.config);
-      pendingRequests.delete(key);
+      const key = generateRequestKey(error.config)
+      pendingRequests.delete(key)
     }
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 ```
+
 三、关键点解析
 
 唯一请求标识：
@@ -92,20 +92,21 @@ axios.interceptors.response.use(
 ```js
 // 示例：快速点击触发重复请求
 function fetchData() {
-  axios.get('/api/data', { params: { id: 1 } })
+  axios
+    .get('/api/data', { params: { id: 1 } })
     .then(res => console.log('请求成功:', res))
     .catch(err => {
       if (axios.isCancel(err)) {
-        console.log('请求被取消:', err.message);
+        console.log('请求被取消:', err.message)
       } else {
-        console.error('请求失败:', err);
+        console.error('请求失败:', err)
       }
-    });
+    })
 }
 
 // 多次调用 fetchData()，只有最后一次请求会成功
-fetchData();
-fetchData();
+fetchData()
+fetchData()
 ```
 
 五、适用场景
@@ -115,6 +116,5 @@ fetchData();
 列表筛选防抖：频繁筛选时取消旧请求，确保结果对应最新条件。
 
 页面切换取消请求：离开页面时取消未完成的请求。
-
 
 # 通过时间戳实现
